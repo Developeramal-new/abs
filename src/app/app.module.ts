@@ -17,6 +17,7 @@ import { MatListModule } from '@angular/material/list';
 import { ImageSliderComponent } from './shared/image-slider/image-slider.component';
 import { WhatWeDoComponent } from './home/what-we-do/what-we-do.component';
 import { OurProcessComponent } from './home/our-process/our-process.component';
+import { HttpClientModule } from '@angular/common/http'
 
 import { MatCarouselModule } from '@ngbmodule/material-carousel';
 @NgModule({
@@ -41,6 +42,7 @@ import { MatCarouselModule } from '@ngbmodule/material-carousel';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    HttpClientModule,
     MatCarouselModule.forRoot(),
   ],
   providers: [],
