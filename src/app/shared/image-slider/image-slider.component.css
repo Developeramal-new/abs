@@ -1,0 +1,12 @@
+#wrap {
+    float: left;
+    position: relative;
+    top: 25%;
+    left: 10%;
+}
+
+#content {
+    float: left;
+    position: relative;
+    
+}

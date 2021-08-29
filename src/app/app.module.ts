@@ -15,9 +15,20 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { ImageSliderComponent } from './shared/image-slider/image-slider.component';
+import { WhatWeDoComponent } from './home/what-we-do/what-we-do.component';
+import { OurProcessComponent } from './home/our-process/our-process.component';
 
+import { MatCarouselModule } from '@ngbmodule/material-carousel';
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HeaderDirective, HomeComponent, ImageSliderComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    HeaderDirective,
+    HomeComponent,
+    ImageSliderComponent,
+    WhatWeDoComponent,
+    OurProcessComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -30,6 +41,7 @@ import { ImageSliderComponent } from './shared/image-slider/image-slider.compone
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatCarouselModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

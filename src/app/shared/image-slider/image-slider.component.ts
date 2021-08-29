@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatCarousel, MatCarouselComponent } from '@ngbmodule/material-carousel';
 
 @Component({
   selector: 'app-image-slider',
@@ -11,5 +12,11 @@ export class ImageSliderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  slides = [
+    {'image': '../../assets/Home/1.jpg'}, 
+    {'image': '../../assets/Home/2.jpg'},
+    {'image': '../../assets/Home/3.jpg'},
+  ];
 
 }
