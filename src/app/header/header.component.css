@@ -1,0 +1,48 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  background: #19284d;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.selected {
+  color: #19284d !important;
+  background-color: #fca311;
+}
+button:hover {
+  color: #19284d;
+  background-color: #fca311;
+}
+
+.mat-list-item,
+.mat-list-item-content,
+.mat-list-text {
+  color: #fca311;
+  text-align: center;
+}
+
+.mat-list-item:hover,
+.mat-list-item-content:hover {
+  color: #19284d;
+  background-color: #fca311;
+}
+
+.hide {
+  display: none;
+}
