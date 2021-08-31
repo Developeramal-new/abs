@@ -14,14 +14,12 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { ImageSliderComponent } from './shared/image-slider/image-slider.component';
 import { WhatWeDoComponent } from './home/what-we-do/what-we-do.component';
 import { OurProcessComponent } from './home/our-process/our-process.component';
-import { HttpClientModule } from '@angular/common/http'
-
-import { MatCarouselModule } from '@ngbmodule/material-carousel';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +44,6 @@ import { MatCarouselModule } from '@ngbmodule/material-carousel';
     MatIconModule,
     MatListModule,
     MatTabsModule,
-    MatCarouselModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
