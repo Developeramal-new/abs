@@ -14,6 +14,8 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import {MatTabsModule} from '@angular/material/tabs';
+
 import { ImageSliderComponent } from './shared/image-slider/image-slider.component';
 import { WhatWeDoComponent } from './home/what-we-do/what-we-do.component';
 import { OurProcessComponent } from './home/our-process/our-process.component';
@@ -35,6 +37,7 @@ import { MatCarouselModule } from '@ngbmodule/material-carousel';
     BrowserAnimationsModule,
 
     AppRoutingModule,
+    HttpClientModule,
 
     MatToolbarModule,
     MatButtonModule,
@@ -42,7 +45,7 @@ import { MatCarouselModule } from '@ngbmodule/material-carousel';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    HttpClientModule,
+    MatTabsModule,
     MatCarouselModule.forRoot(),
   ],
   providers: [],

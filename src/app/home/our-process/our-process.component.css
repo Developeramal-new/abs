@@ -44,3 +44,80 @@ h3 {
   top: 12px;
   width: 300px;
 }
+
+/* .tab {
+  color: rgba(25, 40, 77, 1);
+  background: rgba(252, 163, 17, 0.8);
+  border-radius: 50%;
+  padding: 30px 10px;
+  margin: 0;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.tab:hover {
+  background-color: rgba(25, 40, 77, 0.5);
+}
+
+.tab-selected {
+}
+
+.line {
+  height: 60px;
+  border-left: solid 1px rgba(255, 255, 255, 0.3);
+  display: inline-block;
+  margin-bottom: -5px;
+  margin-left: 100px;
+  display: none;
+}
+
+.tab-selected .line {
+  display: block;
+}
+
+@media screen and (max-width: 991px) {
+  .line {
+    display: none;
+  }
+  .tab-selected .line {
+    display: none;
+  }
+  .tab-container {
+    padding-bottom: 20px;
+  }
+  .tab-selected .tab:after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid #fca311;
+    top: 12px;
+    width: 160px;
+    left: 100%;
+  }
+} */
+.tab-label {
+  color: #19284d;
+  background: #fca311;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.tab {
+  color: #fff;
+  background: transparent;
+  border-radius: 30%;
+}
+
+.tab H4 {
+  text-align: center;
+  color: #fca311;
+}
+
+.tab p {
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 14px;
+}

@@ -8,12 +8,19 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
+$mat-custom: (
+  1000: #19284d,
+  1001: #fca311,
+  contrast: (
+    1000: #fca311,
+    1001: #19284d,
+  ),
+);
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$RealEstate-primary: mat-palette($mat-blue, 1000);
-$RealEstate-accent: mat-palette($mat-yellow, 1000);
-
+$RealEstate-primary: mat-palette($mat-custom, 1000);
+$RealEstate-accent: mat-palette($mat-custom, 1001);
 // The warn palette is optional (defaults to red).
 $RealEstate-warn: mat-palette($mat-red);
 
