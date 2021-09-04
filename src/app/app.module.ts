@@ -15,7 +15,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
+<<<<<<< HEAD
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+=======
+import {MatCardModule} from '@angular/material/card';
+>>>>>>> 3240277869ba3ded3f86a7b5a389f8b71a4abaec
 
 import { ImageSliderComponent } from './shared/image-slider/image-slider.component';
 import { WhatWeDoComponent } from './home/what-we-do/what-we-do.component';
@@ -25,7 +29,11 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { OfferedServicesComponent } from './offered-services/offered-services.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PricingComponent } from './pricing/pricing.component';
+<<<<<<< HEAD
 import { GalleryComponent } from './gallery/gallery.component';
+=======
+
+>>>>>>> 3240277869ba3ded3f86a7b5a389f8b71a4abaec
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +57,7 @@ import { GalleryComponent } from './gallery/gallery.component';
     HttpClientModule,
 
     MatToolbarModule,
+    MatCardModule,
     MatButtonModule,
     LayoutModule,
     MatSidenavModule,
