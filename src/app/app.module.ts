@@ -15,6 +15,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
+import {MatCardModule} from '@angular/material/card';
 
 import { ImageSliderComponent } from './shared/image-slider/image-slider.component';
 import { WhatWeDoComponent } from './home/what-we-do/what-we-do.component';
@@ -24,6 +25,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { OfferedServicesComponent } from './offered-services/offered-services.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PricingComponent } from './pricing/pricing.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +48,7 @@ import { PricingComponent } from './pricing/pricing.component';
     HttpClientModule,
 
     MatToolbarModule,
+    MatCardModule,
     MatButtonModule,
     LayoutModule,
     MatSidenavModule,
