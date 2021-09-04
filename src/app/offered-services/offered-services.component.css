@@ -44,21 +44,23 @@ p {
   text-align: center;
 }
 
-.mat-tab-label {
+.parent-group .mat-tab-label {
   color: #fca311;
   opacity: 1 !important;
 }
 
-.mat-tab-label-active {
+.parent-group .mat-tab-label-active {
   background: #fca311 !important;
 
   color: #19284d;
 }
 
-.mat-tab-header-pagination-chevron {
+.parent-group .mat-tab-header-pagination-chevron {
   border-color: #fca311;
 }
 
-.mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron {
+.parent-group
+  .mat-tab-header-pagination-disabled
+  .mat-tab-header-pagination-chevron {
   border-color: #fca211a4;
 }

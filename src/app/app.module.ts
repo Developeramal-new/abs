@@ -15,6 +15,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import { ImageSliderComponent } from './shared/image-slider/image-slider.component';
 import { WhatWeDoComponent } from './home/what-we-do/what-we-do.component';
@@ -24,6 +25,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { OfferedServicesComponent } from './offered-services/offered-services.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PricingComponent } from './pricing/pricing.component';
+import { GalleryComponent } from './gallery/gallery.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +39,7 @@ import { PricingComponent } from './pricing/pricing.component';
     OfferedServicesComponent,
     ContactUsComponent,
     PricingComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +55,7 @@ import { PricingComponent } from './pricing/pricing.component';
     MatIconModule,
     MatListModule,
     MatTabsModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent],

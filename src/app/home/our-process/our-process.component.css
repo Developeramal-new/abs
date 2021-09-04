@@ -130,6 +130,10 @@ h3 {
   }
 }
 
-.mat-tab-label {
+.our-parent-group .mat-tab-label {
   opacity: 1 !important;
+}
+
+.our-parent-group .mat-tab-label-active {
+  background: transparent !important;
 }

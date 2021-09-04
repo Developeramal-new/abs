@@ -1,4 +1,8 @@
-<div >
+<div class="loading" *ngIf="loading">
+  <mat-spinner class="loader" color="accent"></mat-spinner>
+</div>
+
+<div>
   <app-header>
     <router-outlet></router-outlet>
   </app-header>
