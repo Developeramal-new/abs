@@ -1,7 +1,11 @@
 img {
   width: 100%;
-  height: 90.9vh;
+  height: 100vh;
   object-fit: cover;
+}
+
+.carousel {
+  position: relative !important;
 }
 
 .drk:after {
@@ -24,7 +28,7 @@ img {
 @media screen and (min-height: 715px) {
   img {
     width: 100%;
-    height: 93vh;
+    height: 100vh;
     object-fit: cover;
   }
 }

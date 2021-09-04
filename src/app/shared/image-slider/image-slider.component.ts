@@ -1,3 +1,10 @@
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -6,6 +13,16 @@ import { DomSanitizer } from '@angular/platform-browser';
   selector: 'app-image-slider',
   templateUrl: './image-slider.component.html',
   styleUrls: ['./image-slider.component.css'],
+  animations: [
+    // the fade-in/fade-out animation.
+    trigger('fade', [
+      state('in', style({ opacity: 0 })),
+      transition('* => in', [
+        style({ opacity: 0 }),
+        animate(2000, style({ opacity: 1 })),
+      ]),
+    ]),
+  ],
 })
 export class ImageSliderComponent implements OnInit {
   slides = [];

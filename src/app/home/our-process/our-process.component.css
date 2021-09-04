@@ -1,6 +1,8 @@
 .wraper {
   height: auto;
-  background: url(../../../assets/bg-2.jpg) fixed;
+  background: url(../../../assets/bg-2.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 h1,
@@ -120,4 +122,14 @@ h3 {
   text-align: justify;
   text-justify: inter-word;
   font-size: 14px;
+}
+
+@media screen and (max-width: 678px) {
+  .wraper {
+    background-size: cover;
+  }
+}
+
+.mat-tab-label {
+  opacity: 1 !important;
 }

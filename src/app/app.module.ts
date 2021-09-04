@@ -20,6 +20,10 @@ import { ImageSliderComponent } from './shared/image-slider/image-slider.compone
 import { WhatWeDoComponent } from './home/what-we-do/what-we-do.component';
 import { OurProcessComponent } from './home/our-process/our-process.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { OfferedServicesComponent } from './offered-services/offered-services.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { PricingComponent } from './pricing/pricing.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +33,10 @@ import { HttpClientModule } from '@angular/common/http';
     ImageSliderComponent,
     WhatWeDoComponent,
     OurProcessComponent,
+    AboutUsComponent,
+    OfferedServicesComponent,
+    ContactUsComponent,
+    PricingComponent,
   ],
   imports: [
     BrowserModule,

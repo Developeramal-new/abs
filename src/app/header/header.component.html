@@ -10,18 +10,31 @@
   >
     <mat-toolbar color="primary">Menu</mat-toolbar>
     <mat-nav-list color="primary">
-      <a mat-list-item class="selected" selected> Home </a>
-      <a mat-list-item selected> About Us </a>
-      <a mat-list-item selected> Services </a>
-      <a mat-list-item selected> Gallery </a>
-      <a mat-list-item selected> Pricing </a>
-      <a mat-list-item selected> Contact Us </a>
+      <a mat-list-item routerLinkActive="selected" routerLink="/home"> Home </a>
+      <a mat-list-item routerLinkActive="selected" routerLink="/aboutus">
+        About Us
+      </a>
+      <a mat-list-item routerLinkActive="selected" routerLink="/services">
+        Services
+      </a>
+      <a mat-list-item routerLinkActive="selected" routerLink="/gallery">
+        Gallery
+      </a>
+      <a mat-list-item routerLinkActive="selected" routerLink="/pricing">
+        Pricing
+      </a>
+      <a mat-list-item routerLinkActive="selected" routerLink="/contactus">
+        Contact Us
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary" style="z-index: 2">
+    <mat-toolbar
+      color="primary"
+      [ngClass]="headercolor ? 'head-toolbar-background' : ''"
+      class="head-toolbar"
+    >
       <button
-        type="button"
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
@@ -32,14 +45,54 @@
       <span>RealEstate</span>
       <span class="spacer"></span>
       <span [ngClass]="!(isHandset$ | async) ? '' : 'hide'">
-        <button mat-button class="selected" color="accent" selected>
+        <button
+          mat-button
+          routerLinkActive="selected"
+          color="accent"
+          routerLink="/home"
+        >
           Home
         </button>
-        <button mat-button color="accent" selected>About Us</button>
-        <button mat-button color="accent" selected>Services</button>
-        <button mat-button color="accent" selected>Gallery</button>
-        <button mat-button color="accent" selected>Pricing</button>
-        <button mat-button color="accent" selected>Contact Us</button>
+        <button
+          mat-button
+          routerLinkActive="selected"
+          color="accent"
+          routerLink="/aboutus"
+        >
+          About Us
+        </button>
+        <button
+          mat-button
+          routerLinkActive="selected"
+          color="accent"
+          routerLink="/services"
+        >
+          Services
+        </button>
+        <button
+          mat-button
+          color="accent"
+          routerLinkActive="selected"
+          routerLink="/gallery"
+        >
+          Gallery
+        </button>
+        <button
+          mat-button
+          routerLinkActive="selected"
+          color="accent"
+          routerLink="/pricing"
+        >
+          Pricing
+        </button>
+        <button
+          mat-button
+          routerLinkActive="selected"
+          color="accent"
+          routerLink="/contactus"
+        >
+          Contact Us
+        </button>
       </span>
     </mat-toolbar>
     <ng-content></ng-content>

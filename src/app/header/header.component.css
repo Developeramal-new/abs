@@ -9,21 +9,28 @@
 .sidenav {
   width: 200px;
   background: #19284d;
+  z-index: 100;
 }
 
 .sidenav .mat-toolbar {
   background: inherit;
 }
 
-.mat-toolbar.mat-primary {
-  position: sticky;
+.head-toolbar {
+  position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 99;
+  width: 100%;
+  color: #fca311;
+}
+
+.head-toolbar-background {
+  background-color: transparent !important;
 }
 
 .selected {
   color: #19284d !important;
-  background-color: #fca311;
+  background-color: #fca311 !important;
 }
 button:hover {
   color: #19284d;
