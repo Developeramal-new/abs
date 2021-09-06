@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { ImageSliderComponent } from './shared/component/image-slider/image-slider.component';
+import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -19,7 +20,6 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCardModule } from '@angular/material/card';
 
-import { ImageSliderComponent } from './shared/image-slider/image-slider.component';
 import { WhatWeDoComponent } from './home/what-we-do/what-we-do.component';
 import { OurProcessComponent } from './home/our-process/our-process.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -28,6 +28,7 @@ import { OfferedServicesComponent } from './offered-services/offered-services.co
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { AppearDirective } from './shared/directive/appear.directive';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { GalleryComponent } from './gallery/gallery.component';
     ContactUsComponent,
     PricingComponent,
     GalleryComponent,
+    AppearDirective,
   ],
   imports: [
     BrowserModule,

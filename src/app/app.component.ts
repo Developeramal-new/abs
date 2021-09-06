@@ -1,4 +1,4 @@
-import { SharedService } from './services/shared.service';
+import { SharedService } from './shared/services/shared.service';
 import { Component, HostListener } from '@angular/core';
 import {
   Router,

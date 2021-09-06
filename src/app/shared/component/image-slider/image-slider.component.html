@@ -3,6 +3,8 @@
   class="carousel slide"
   data-bs-ride="carousel"
   data-bs-pause="false"
+  (slid.bs.carousel)="slide($event)"
+  (slid.bs.carousel)="slid($event)"
 >
   <div class="carousel-inner">
     <div class="carousel-item drk active" data-bs-interval="5000">
@@ -12,7 +14,7 @@
         class="d-block w-100"
         alt="..."
       />
-      <div @fade class="carousel-caption d-md-block fly-in">
+      <div class="carousel-caption d-md-block" [@slideIn]="slideani[0]">
         <h6>STANDARDIZED BRANDED INTERIORS</h6>
         <br />
         <h1>YOURS IN 45-120 DAYS</h1>
@@ -31,7 +33,7 @@
         class="d-block w-100"
         alt="..."
       />
-      <div [@fade]="in" class="carousel-caption d-md-block fly-in">
+      <div class="carousel-caption d-md-block" [@slideIn]="slideani[i + 1]">
         <h6>STANDARDIZED BRANDED INTERIORS</h6>
         <br />
         <h1>YOURS IN 45-120 DAYS</h1>

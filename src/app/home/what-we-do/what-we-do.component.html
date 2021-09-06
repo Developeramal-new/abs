@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 offset-md-3 text-center">
-        <h1>What We Do</h1>
+        <h1 (appear)="hide($event)" [@slideIn]="hideval">What We Do</h1>
         <div class="separator">
           <span
             ><mat-icon aria-label="Circle" color="accent"
