@@ -1,8 +1,7 @@
 .sec1 {
   min-height: 100vh;
-  width: auto;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
-    url("../../assets/bg-side-1.jpg");
+  width: 100%;
+  background: url("../../assets/subheader-2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

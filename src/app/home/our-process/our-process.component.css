@@ -1,5 +1,6 @@
 .wraper {
   height: auto;
+  width: auto;
   background: url(../../../assets/bg-2.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;

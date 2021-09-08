@@ -2,6 +2,7 @@
   height: auto;
   background: #19284d;
   color: #e5e5e5;
+  width: auto;
 }
 
 h1,
@@ -45,4 +46,3 @@ h3 {
   top: 12px;
   width: 300px;
 }
-

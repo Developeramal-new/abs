@@ -21,9 +21,9 @@ export class AppComponent {
   loading = true;
 
   constructor(private router: Router, private shared: SharedService) {
-    // this.router.events.subscribe((e: RouterEvent) => {
-    //   this.navigationInterceptor(e);
-    // });
+    this.router.events.subscribe((e: RouterEvent) => {
+      this.navigationInterceptor(e);
+    });
     this.shared.loading.pipe(delay(0)).subscribe((val) => {
       this.loading = val;
     });
