@@ -3,28 +3,26 @@ import { Subject } from 'rxjs';
 import { SharedService } from './shared.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ImageService {
-
   private imageLoad = new Subject<number>();
   private images: Map<HTMLElement, boolean> = new Map();
   private imagesLoading = 0;
 
   imagesLoading$ = this.imageLoad.asObservable();
 
-  constructor(private iserv: SharedService) { }
+  constructor(private iserv: SharedService) {}
 
-  imageLoading(img: HTMLElement){
-    if(!this.images.has(img) || this.images.get(img)){
-      this.images.set(img,false);
+  imageLoading(img: HTMLElement) {
+    if (!this.images.has(img) || this.images.get(img)) {
+      this.images.set(img, false);
       this.imagesLoading++;
       this.imageLoad.next(this.imagesLoading);
     }
-    if(this.imagesLoading >0 ){
+    if (this.imagesLoading > 0) {
       this.iserv.loading.next(true);
     }
-    
   }
 
   imageLoadedOrError(img: HTMLElement) {
@@ -33,10 +31,9 @@ export class ImageService {
       this.imagesLoading--;
       this.imageLoad.next(this.imagesLoading);
     }
-    if(this.imagesLoading == 0){
+    if (this.imagesLoading == 0) {
       this.iserv.loading.next(false);
-    }
-    else{
+    } else {
       this.iserv.loading.next(true);
     }
   }

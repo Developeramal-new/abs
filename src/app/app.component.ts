@@ -9,6 +9,7 @@ import {
   NavigationCancel,
   NavigationError,
 } from '@angular/router';
+import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -20,10 +21,10 @@ export class AppComponent {
   loading = true;
 
   constructor(private router: Router, private shared: SharedService) {
-    this.router.events.subscribe((e: RouterEvent) => {
-      this.navigationInterceptor(e);
-    });
-    this.shared.loading.subscribe((val) => {
+    // this.router.events.subscribe((e: RouterEvent) => {
+    //   this.navigationInterceptor(e);
+    // });
+    this.shared.loading.pipe(delay(0)).subscribe((val) => {
       this.loading = val;
     });
   }
@@ -31,9 +32,6 @@ export class AppComponent {
   navigationInterceptor(event: RouterEvent): void {
     if (event instanceof NavigationStart) {
       this.shared.loading.next(true);
-    }
-    if (event instanceof NavigationEnd) {
-      this.shared.loading.next(false);
     }
     // if (event instanceof NavigationCancel) {
     //   this.shared.loading.next(false);
