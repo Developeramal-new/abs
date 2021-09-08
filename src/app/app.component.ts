@@ -35,11 +35,11 @@ export class AppComponent {
     if (event instanceof NavigationEnd) {
       this.shared.loading.next(false);
     }
-    if (event instanceof NavigationCancel) {
-      this.shared.loading.next(false);
-    }
-    if (event instanceof NavigationError) {
-      this.shared.loading.next(false);
-    }
+    // if (event instanceof NavigationCancel) {
+    //   this.shared.loading.next(false);
+    // }
+    // if (event instanceof NavigationError) {
+    //   this.shared.loading.next(false);
+    // }
   }
 }

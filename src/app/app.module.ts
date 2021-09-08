@@ -30,6 +30,7 @@ import { PricingComponent } from './pricing/pricing.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { AppearDirective } from './shared/directive/appear.directive';
 import { ViewerComponent } from './gallery/viewer/viewer.component';
+import { ImageDirective } from './shared/directive/image.directive';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ViewerComponent } from './gallery/viewer/viewer.component';
     GalleryComponent,
     AppearDirective,
     ViewerComponent,
+    ImageDirective,
   ],
   imports: [
     BrowserModule,
