@@ -21,3 +21,16 @@
   text-align: center;
   margin: 30px 0 30px 0;
 }
+
+.image {
+  min-height: 30vh;
+  max-height: 30vh;
+  height: 30vh;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.image:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}

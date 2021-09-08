@@ -1,3 +1,4 @@
+import { Slidedetails } from './../../Models/slidedetails';
 import {
   animate,
   state,
@@ -5,7 +6,7 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 
@@ -29,24 +30,20 @@ import { DomSanitizer } from '@angular/platform-browser';
   ],
 })
 export class ImageSliderComponent implements OnInit {
-  slides = [];
+  @Input() slides: Slidedetails;
+  @Input() active: number = 0;
   num = [];
   slideani = [];
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {}
 
   ngOnInit(): void {
-    this.slides = [
-      { image: '../../assets/Home/1.jpg' },
-      { image: '../../assets/Home/2.jpg' },
-      { image: '../../assets/Home/3.jpg' },
-    ];
-    this.num = Array(this.slides.length - 1).fill(1);
-    this.slideani = Array(this.slides.length).fill('inactive');
+    this.num = Array(this.slides.data.length - 1).fill(1);
+    this.slideani = Array(this.slides.data.length).fill('inactive');
     this.slideani[0] = 'active';
   }
 
   slide(event) {
-    this.slideani = Array(this.slides.length).fill('inactive');
+    this.slideani = Array(this.slides.data.length).fill('inactive');
   }
   slid(event) {
     this.slideani[event.to] = 'active';

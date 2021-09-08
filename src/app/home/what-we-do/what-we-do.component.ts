@@ -39,7 +39,6 @@ export class WhatWeDoComponent implements OnInit {
   ngOnInit(): void {}
 
   hide(val) {
-    console.log(val);
     if (val) {
       this.hideval = 'active';
     } else {

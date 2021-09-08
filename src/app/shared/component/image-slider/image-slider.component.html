@@ -7,38 +7,25 @@
   (slid.bs.carousel)="slid($event)"
 >
   <div class="carousel-inner">
-    <div class="carousel-item drk active" data-bs-interval="5000">
-      <img
-        id="images"
-        [src]="slides[0].image"
-        class="d-block w-100"
-        alt="..."
-      />
-      <div class="carousel-caption d-md-block" [@slideIn]="slideani[0]">
-        <h6>STANDARDIZED BRANDED INTERIORS</h6>
-        <br />
-        <h1>YOURS IN 45-120 DAYS</h1>
-        <br />
-        <button mat-raised-button color="accent">Contact Us</button>
-      </div>
-    </div>
     <div
       class="carousel-item drk"
+      [ngClass]="[i == active ? 'active' : '', slides.overlay ? 'overlay' : '']"
       data-bs-interval="5000"
-      *ngFor="let slide of num; let i = index"
+      *ngFor="let slide of slides.data; let i = index"
     >
-      <img
-        id="images"
-        [src]="slides[i + 1].image"
-        class="d-block w-100"
-        alt="..."
-      />
-      <div class="carousel-caption d-md-block" [@slideIn]="slideani[i + 1]">
-        <h6>STANDARDIZED BRANDED INTERIORS</h6>
+      <img id="images" [src]="slide.src" class="d-block w-100" alt="..." />
+      <div
+        class="carousel-caption d-md-block"
+        [@slideIn]="slideani[i]"
+        *ngIf="slide.isCaption"
+      >
+        <h6>{{ slide.caption.h6 }}</h6>
         <br />
-        <h1>YOURS IN 45-120 DAYS</h1>
+        <h1>{{ slide.caption.h1 }}</h1>
         <br />
-        <button mat-raised-button color="accent">Contact Us</button>
+        <button mat-raised-button color="accent">
+          {{ slide.caption.button }}
+        </button>
       </div>
     </div>
   </div>
