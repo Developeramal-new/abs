@@ -29,6 +29,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { AppearDirective } from './shared/directive/appear.directive';
+import { ImageDirective } from './shared/directive/image.directive';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { AppearDirective } from './shared/directive/appear.directive';
     PricingComponent,
     GalleryComponent,
     AppearDirective,
+    ImageDirective,
   ],
   imports: [
     BrowserModule,
