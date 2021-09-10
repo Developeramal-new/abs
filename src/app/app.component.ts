@@ -24,7 +24,7 @@ export class AppComponent {
     this.router.events.subscribe((e: RouterEvent) => {
       this.navigationInterceptor(e);
     });
-    this.shared.loading.pipe(delay(0)).subscribe((val) => {
+    this.shared.loading.pipe(delay(1)).subscribe((val) => {
       this.loading = val;
     });
   }

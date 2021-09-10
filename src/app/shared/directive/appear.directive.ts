@@ -64,8 +64,8 @@ export class AppearDirective implements AfterViewInit, OnDestroy {
       // (this.scrollPos >= this.elementPos &&
       //   this.scrollPos <= this.elementPos + this.elementHeight) ||
       this.scrollPos + this.windowHeight >=
-        this.elementPos + this.elementHeight &&
-      this.scrollPos <= this.elementPos - 64
+        this.elementPos + this.elementHeight / 2 &&
+      this.scrollPos <= this.elementPos + this.elementHeight - 100
     );
   }
 

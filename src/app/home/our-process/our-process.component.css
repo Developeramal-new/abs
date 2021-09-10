@@ -8,7 +8,7 @@
 
 h1,
 h3 {
-  color: #fca311;
+  color: var(--accent);
 }
 
 .spacer-single {
@@ -43,7 +43,7 @@ h3 {
 .separator span:after {
   content: "";
   position: absolute;
-  border-bottom: 1px solid #fca311;
+  border-bottom: 1px solid var(--accent);
   top: 12px;
   width: 300px;
 }
@@ -95,15 +95,15 @@ h3 {
   .tab-selected .tab:after {
     content: "";
     position: absolute;
-    border-bottom: 1px solid #fca311;
+    border-bottom: 1px solid var(--accent);
     top: 12px;
     width: 160px;
     left: 100%;
   }
 } */
 .tab-label {
-  color: #19284d;
-  background: #fca311;
+  color: var(--primary);
+  background: var(--accent);
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -116,7 +116,7 @@ h3 {
 
 .tab H4 {
   text-align: center;
-  color: #fca311;
+  color: var(--accent);
 }
 
 .tab p {

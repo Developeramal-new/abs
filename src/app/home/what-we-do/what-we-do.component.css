@@ -1,13 +1,14 @@
 .wraper {
   height: auto;
-  background: #19284d;
+  background: var(--primary);
   color: #e5e5e5;
   width: auto;
+  overflow: none;
 }
 
 h1,
 h3 {
-  color: #fca311;
+  color: var(--accent);
 }
 
 .spacer-single {
@@ -42,7 +43,7 @@ h3 {
 .separator span:after {
   content: "";
   position: absolute;
-  border-bottom: 1px solid #fca311;
+  border-bottom: 1px solid var(--accent);
   top: 12px;
   width: 300px;
 }

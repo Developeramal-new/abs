@@ -24,7 +24,7 @@
 
 h2,
 h3 {
-  color: #fca311;
+  color: var(--accent);
 }
 
 img {

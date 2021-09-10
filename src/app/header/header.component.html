@@ -42,8 +42,9 @@
       >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>RealEstate</span>
-      <span class="spacer"></span>
+      <span *ngIf="isHandset$ | async" class="spacer"></span>
+      <span><img src="../../assets/Logo.png" routerLink="/home" /></span>
+      <span *ngIf="!(isHandset$ | async)" class="spacer"></span>
       <span [ngClass]="!(isHandset$ | async) ? '' : 'hide'">
         <button
           mat-button
