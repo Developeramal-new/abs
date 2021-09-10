@@ -15,26 +15,35 @@ export class ImageService {
   constructor(private iserv: SharedService) {}
 
   imageLoading(img: HTMLElement) {
-    if (!this.images.has(img) || this.images.get(img)) {
+    this.iserv.loading.next(true);
+    if ((!this.images.has(img) || this.images.get(img)) && img.className !== 'loader') {
       this.images.set(img, false);
       this.imagesLoading++;
       this.imageLoad.next(this.imagesLoading);
+      console.log(this.images,"in")
     }
-    if (this.imagesLoading > 0) {
-      this.iserv.loading.next(true);
-    }
+    
   }
 
   imageLoadedOrError(img: HTMLElement) {
-    if (this.images.has(img) && !this.images.get(img)) {
+    if ((this.images.has(img) && !this.images.get(img)) && img.className !== 'loader') {
       this.images.set(img, true);
       this.imagesLoading--;
       this.imageLoad.next(this.imagesLoading);
+      console.log(this.imagesLoading)
+      console.log(this.images,"out")
     }
-    if (this.imagesLoading == 0) {
-      this.iserv.loading.next(false);
-    } else {
-      this.iserv.loading.next(true);
-    }
+    // let jhonKeys = [...this.images.entries()]
+    //     .filter(({ 1: v }) => v === false)
+    //     .map(([k]) => k);
+    // console.log(jhonKeys);
+    setTimeout(() => {
+      if (this.imagesLoading == 0) {
+        this.iserv.loading.next(false);
+      } else {
+        this.iserv.loading.next(true);
+      }
+    }, 1000);
+    
   }
 }

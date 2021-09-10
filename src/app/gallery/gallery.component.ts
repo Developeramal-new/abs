@@ -28,7 +28,6 @@ export class GalleryComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {}
 
   ngAfterViewInit() {
-    this.shared.loading.next(false);
   }
 
   openFunc(num) {

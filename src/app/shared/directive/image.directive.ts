@@ -7,7 +7,7 @@ import {
 import { ImageService } from '../services/image.service';
 
 @Directive({
-  //selector: '[appImage]'
+  // selector: '[appImage]'
   selector: 'img',
 })
 export class ImageDirective {
