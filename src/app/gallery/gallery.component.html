@@ -1,0 +1,30 @@
+<section class="sec1">
+  <div class="spacer-single"></div>
+  <div class="spacer-single"></div>
+  <div class="spacer-single"></div>
+  <div class="spacer-single"></div>
+
+  <div class="container">
+    <div class="row">
+      <ng-container *ngFor="let image of images.data; let i = index">
+        <div class="col-3" (click)="openFunc(i)">
+          <img
+            id="images"
+            [src]="image.src"
+            class="img-fluid image"
+            alt="..."
+          />
+          <div class="spacer-single"></div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section>
+
+<app-viewer
+  *ngIf="open"
+  [slides]="images"
+  [active]="active"
+  (close)="close()"
+></app-viewer>
+<img [hidden]="true" src="../../assets/bg-side-1.jpg">

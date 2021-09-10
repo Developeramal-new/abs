@@ -26,14 +26,14 @@
 h2,
 h3,
 h4 {
-  color: #fca311;
+  color: var(--accent);
   text-align: center;
 }
 
 strong {
-  color: #fca311;
+  color: var(--accent);
 }
 
 a {
-  color: #fca311;
+  color: var(--accent);
 }

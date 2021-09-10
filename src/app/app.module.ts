@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { ImageSliderComponent } from './shared/component/image-slider/image-slider.component';
+import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -16,7 +17,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
 
-import { ImageSliderComponent } from './shared/image-slider/image-slider.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatCardModule } from '@angular/material/card';
+
 import { WhatWeDoComponent } from './home/what-we-do/what-we-do.component';
 import { OurProcessComponent } from './home/our-process/our-process.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -24,6 +27,11 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { OfferedServicesComponent } from './offered-services/offered-services.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PricingComponent } from './pricing/pricing.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { AppearDirective } from './shared/directive/appear.directive';
+import { ViewerComponent } from './gallery/viewer/viewer.component';
+import { ImageDirective } from './shared/directive/image.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +45,10 @@ import { PricingComponent } from './pricing/pricing.component';
     OfferedServicesComponent,
     ContactUsComponent,
     PricingComponent,
+    GalleryComponent,
+    AppearDirective,
+    ViewerComponent,
+    ImageDirective,
   ],
   imports: [
     BrowserModule,
@@ -46,12 +58,14 @@ import { PricingComponent } from './pricing/pricing.component';
     HttpClientModule,
 
     MatToolbarModule,
+    MatCardModule,
     MatButtonModule,
     LayoutModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule,
     MatTabsModule,
+    MatProgressSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

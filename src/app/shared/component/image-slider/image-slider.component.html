@@ -1,0 +1,50 @@
+<div
+  id="carouselExampleCaptions"
+  class="carousel slide"
+  data-bs-ride="carousel"
+  data-bs-pause="false"
+  (slid.bs.carousel)="slide($event)"
+  (slid.bs.carousel)="slid($event)"
+>
+  <div class="carousel-inner">
+    <div
+      class="carousel-item drk"
+      [ngClass]="[i == active ? 'active' : '', slides.overlay ? 'overlay' : '']"
+      data-bs-interval="5000"
+      *ngFor="let slide of slides.data; let i = index"
+    >
+      <img id="images" [src]="slide.src" class="d-block w-100" alt="..." />
+      <div
+        class="carousel-caption d-md-block"
+        [@slideIn]="slideani[i]"
+        *ngIf="slide.isCaption"
+      >
+        <h6>{{ slide.caption.h6 }}</h6>
+        <br />
+        <h1>{{ slide.caption.h1 }}</h1>
+        <br />
+        <button mat-raised-button color="accent">
+          {{ slide.caption.button }}
+        </button>
+      </div>
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleCaptions"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleCaptions"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

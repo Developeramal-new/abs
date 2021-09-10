@@ -8,7 +8,7 @@
 
 .sidenav {
   width: 200px;
-  background: #19284d;
+  background: var(--primary);
   z-index: 100;
 }
 
@@ -21,33 +21,39 @@
   top: 0;
   z-index: 99;
   width: 100%;
-  color: #fca311;
+  color: var(--accent);
 }
 
 .head-toolbar-background {
   background-color: transparent !important;
 }
 
+.head-toolbar img {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
 .selected {
-  color: #19284d !important;
-  background-color: #fca311 !important;
+  color: var(--primary) !important;
+  background-color: var(--accent) !important;
 }
 button:hover {
-  color: #19284d;
-  background-color: #fca311;
+  color: var(--primary);
+  background-color: var(--accent);
 }
 
 .mat-list-item,
 .mat-list-item-content,
 .mat-list-text {
-  color: #fca311;
+  color: var(--accent);
   text-align: center;
 }
 
 .mat-list-item:hover,
 .mat-list-item-content:hover {
-  color: #19284d;
-  background-color: #fca311;
+  color: var(--primary);
+  background-color: var(--accent);
 }
 
 .hide {

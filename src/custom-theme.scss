@@ -8,14 +8,24 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
+// $mat-custom: (
+//   1000: #19284d,
+//   1001: #fca311,
+//   contrast: (
+//     1000: #fca311,
+//     1001: #19284d,
+//   ),
+// );
+
 $mat-custom: (
-  1000: #19284d,
-  1001: #fca311,
+  1000: var(--primary),
+  1001: var(--accent),
   contrast: (
-    1000: #fca311,
-    1001: #19284d,
+    1000: var(--accent),
+    1001: var(--primary),
   ),
 );
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/

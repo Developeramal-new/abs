@@ -1,3 +1,4 @@
+import { GalleryComponent } from './gallery/gallery.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { OfferedServicesComponent } from './offered-services/offered-services.component';
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'aboutus', component: AboutUsComponent },
   { path: 'services', component: OfferedServicesComponent },
+  { path: 'gallery', component: GalleryComponent },
   { path: 'pricing', component: PricingComponent },
   { path: 'contactus', component: ContactUsComponent },
   { path: '**', redirectTo: 'home' },
