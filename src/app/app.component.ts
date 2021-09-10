@@ -25,15 +25,14 @@ export class AppComponent {
       this.navigationInterceptor(e);
     });
     this.shared.loading.pipe().subscribe((val) => {
-  
+
       this.loading = val;
-      
+
     });
   }
 
   navigationInterceptor(event: RouterEvent): void {
     if (event instanceof NavigationStart) {
-      console.log("Started loading")
       this.shared.loading.next(true);
     }
     // if (event instanceof NavigationCancel) {

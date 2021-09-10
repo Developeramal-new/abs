@@ -16,34 +16,35 @@ export class ImageService {
 
   imageLoading(img: HTMLElement) {
     this.iserv.loading.next(true);
-    if ((!this.images.has(img) || this.images.get(img)) && img.className !== 'loader') {
+    if (
+      (!this.images.has(img) || this.images.get(img)) &&
+      img.className !== 'loader'
+    ) {
       this.images.set(img, false);
       this.imagesLoading++;
       this.imageLoad.next(this.imagesLoading);
-      console.log(this.images,"in")
     }
-    
   }
 
   imageLoadedOrError(img: HTMLElement) {
-    if ((this.images.has(img) && !this.images.get(img)) && img.className !== 'loader') {
+    if (
+      this.images.has(img) &&
+      !this.images.get(img) &&
+      img.className !== 'loader'
+    ) {
       this.images.set(img, true);
       this.imagesLoading--;
       this.imageLoad.next(this.imagesLoading);
-      console.log(this.imagesLoading)
-      console.log(this.images,"out")
     }
     // let jhonKeys = [...this.images.entries()]
     //     .filter(({ 1: v }) => v === false)
     //     .map(([k]) => k);
-    // console.log(jhonKeys);
     setTimeout(() => {
       if (this.imagesLoading == 0) {
         this.iserv.loading.next(false);
       } else {
         this.iserv.loading.next(true);
       }
-    }, 1000);
-    
+    }, 100);
   }
 }
